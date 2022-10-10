@@ -4,7 +4,8 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <title>Panda Card</title>
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,500" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <style>
             * {
                 box-sizing: border-box;
@@ -17,7 +18,7 @@
                 padding: 1rem;
                 /* background: white; */
                 background: url('panda.jpg');
-                font-family: 'Source Code Pro', monospace;
+                font-family: 'Nunito Sans', monospace;
                 
                 text-rendering: optimizelegibility;
                 -webkit-font-smoothing: antialiased;
@@ -30,7 +31,7 @@
             }
 
             .card { 
-                width: calc(300px * 1.586);
+                width: calc(350px * 1.586);
                 height: var(300px);
                 
                 border-radius: 0.75rem;
@@ -65,7 +66,7 @@
             
             .occupation {
                 font-weight: 700;
-                font-size: 1.25rem;
+                font-size: 1.5rem;
                 text-align: center;
                 color: #9EDEC6;
             }
@@ -90,7 +91,7 @@
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 0.5rem;
-                align-items:center
+                /* align-items:center */
             }
 
             .item .value {
@@ -100,6 +101,10 @@
             a:link {
                 color: white;
                 font-weight: 1
+            }
+
+            a:hover{
+                color: #9EDEC6;
             }
 
             a {
@@ -135,29 +140,35 @@
     </head>
     <body>
         <div class="card">
-        <div class="card-details">
-            <div class="name">Cuong Huynh</div>
-            <div class="occupation">Data Scientist</div>
-            
-            <div class="card-about">
-                <div class="item">
-                    <span class="label"><img class="github"src="icon/github2.png"</span>
-                    <span class="value"><a href="https://github.com/alexiehuynh17" target="_blank">github.com/alexiehuynh17</a></span>
+            <div class="card-details">
+                <div class="name">Cuong Huynh</div>
+                <div class="occupation">Data Scientist</div>
+                
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-auto">
+                        <div class="card-about">
+                            <div class="item">
+                                <span class="label"><img class="github"src="icon/github2.png"</span>
+                                <span class="value"><a href="https://github.com/alexiehuynh17" target="_blank">github.com/alexiehuynh17</a></span>
+                            </div>
+                        </div>
+                        <div class="card-about">
+                            <div class="item">
+                                <span class="label"><img class="linkedin"src="icon/in2.png"</span>
+                                <span class="value"><a href="https://www.linkedin.com/in/cuonghd/" target="_blank">linkedin.com/in/cuonghd</a></span>
+                            </div>
+                        </div>
+                        <div class="card-about">
+                            <div class="item">
+                                <span class="label"><img class="email"src="icon/email.png"</span>
+                                <span class="value"><a href="mailto: cuonghuynh.cv@gmail.com" target="_blank">cuonghuynh.cv@gmail.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col"></div> -->
                 </div>
             </div>
-            <div class="card-about">
-                <div class="item">
-                    <span class="label"><img class="linkedin"src="icon/in2.png"</span>
-                    <span class="value"><a href="https://www.linkedin.com/in/cuonghd/" target="_blank">linkedin.com/in/cuonghd</a></span>
-                </div>
-            </div>
-            <div class="card-about">
-                <div class="item">
-                    <span class="label"><img class="email"src="icon/email.png"</span>
-                    <span class="value"><a href="mailto: cuonghuynh.cv@gmail.com" target="_blank">cuonghuynh.cv@gmail.com</a></span>
-                </div>
-            </div>
-        </div>
         </div>
     </body>
 </html>
