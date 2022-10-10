@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Panda Card</title>
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500" rel="stylesheet">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                height: 100vh;
+                margin: 0;
+                display: grid;
+                place-items: center;
+                padding: 1rem;
+                /* background: white; */
+                background: url('panda.jpg');
+                font-family: 'Source Code Pro', monospace;
+                
+                text-rendering: optimizelegibility;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                /* background-position: bottom right; */
+                background-position: 130% 50%;
+            }
+
+            .card { 
+                width: calc(300px * 1.586);
+                height: var(300px);
+                
+                border-radius: 0.75rem;
+                box-shadow:  0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+                
+                background: rgb(0, 0, 0);
+                
+                display: grid;
+                /* grid-template-columns: 40% auto; */
+                color: rgb(255, 255, 255);
+                
+                align-items: center;
+                
+                will-change: transform;
+                transition: transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+                
+            }
+
+            .card:hover{
+                transform: scale(1.1);
+                box-shadow:  0 32px 80px 14px rgba(0,0,0,0.36), 0 0 0 1px rgba(0, 0, 0, 0.3);
+            }
+
+            .card-details {
+                padding: 1rem;
+            }
+            
+            .name {
+                text-align: center;
+                font-size: 1.25rem;
+            }
+            
+            .occupation {
+                font-weight: 700;
+                font-size: 1.25rem;
+                text-align: center;
+                color: #9EDEC6;
+            }
+            
+            .card-avatar {
+                display: grid;
+                place-items: center;
+            }
+            
+            svg {
+                fill: #9EDEC6;
+                width: 65%;
+            }
+            
+            .card-about {
+                margin-top: 1rem;
+                display: grid;
+                grid-auto-flow: column;
+            }
+            
+            .item {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 0.5rem;
+                align-items:center
+            }
+
+            .item .value {
+                font-size: 1rem;
+            }
+
+            a:link {
+                color: white;
+                font-weight: 1
+            }
+
+            a {
+                color: white;
+            }
+
+            .item .label {
+                margin-top: 0.15rem;
+                font-size: 0.75rem;
+                font-weight: 600;
+                color: #ff1ead;
+            }
+
+
+            .item .label .github{
+                width: 50px;
+                vertical-align:middle;
+                height: 50px;
+            }
+
+            .item .label .linkedin{
+                width: 50px;
+                vertical-align:middle;
+                height: 50px;
+            }
+
+            .item .label .email{
+                width: 50px;
+                vertical-align:middle;
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+        <div class="card-details">
+            <div class="name">Cuong Huynh</div>
+            <div class="occupation">Data Scientist</div>
+            
+            <div class="card-about">
+                <div class="item">
+                    <span class="label"><img class="github"src="icon/github2.png"</span>
+                    <span class="value"><a href="https://github.com/alexiehuynh17" target="_blank">github.com/alexiehuynh17</a></span>
+                </div>
+            </div>
+            <div class="card-about">
+                <div class="item">
+                    <span class="label"><img class="linkedin"src="icon/in2.png"</span>
+                    <span class="value"><a href="https://www.linkedin.com/in/cuonghd/" target="_blank">linkedin.com/in/cuonghd</a></span>
+                </div>
+            </div>
+            <div class="card-about">
+                <div class="item">
+                    <span class="label"><img class="email"src="icon/email.png"</span>
+                    <span class="value"><a href="mailto: cuonghuynh.cv@gmail.com" target="_blank">cuonghuynh.cv@gmail.com</a></span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
